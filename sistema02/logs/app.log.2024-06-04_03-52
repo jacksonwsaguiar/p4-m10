@@ -1,0 +1,4 @@
+{"time": "2024-06-04 03:50:59,917", "name": "main", "level": "INFO", "message": "Acessando a rota /"}
+{"time": "2024-06-04 03:51:08,318", "name": "routers.usuarios", "level": "INFO", "message": "{'message': 'Acessando a rota /usuarios', 'method': 'GET'}"}
+{"time": "2024-06-04 03:52:06,960", "name": "routers.usuarios", "level": "INFO", "message": "{'message': 'Acessando a rota /usuarios', 'method': 'POST', 'usuario': {'id': 0, 'nome': 'vegeta', 'email': 'vegeta@mail.com', 'senha': 'Goku', 'data_criacao': datetime.datetime(2024, 6, 4, 6, 51, 48, 197000, tzinfo=TzInfo(UTC)), 'data_modificacao': datetime.datetime(2024, 6, 4, 6, 51, 48, 197000, tzinfo=TzInfo(UTC))}}"}
+{"time": "2024-06-04 03:52:16,329", "name": "routers.usuarios", "level": "INFO", "message": "{'message': 'Acessando a rota /usuarios', 'method': 'GET'}"}

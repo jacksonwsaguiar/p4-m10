@@ -1,0 +1,47 @@
+# docker-compose.yml
+
+version: '3.8'
+
+services:
+  user-service:
+    build:
+      context: ./user-service
+    ports:
+      - "3001:3001"
+    depends_on:
+      - rabbitmq
+
+  proccess-service:
+    build:
+      context: ./proccess-image-service
+    ports:
+      - "3002:3002"
+    depends_on:
+      - rabbitmq
+
+  sistema02:
+    build: ./sistema02/
+    ports:
+      - "8000:8000"
+    container_name: sistema02
+    volumes:
+      - ./logs:/app/logs
+
+  logger-service:
+    build:
+      context: ./logger-service
+    ports:
+      - "3004:3004"
+    depends_on:
+      - rabbitmq
+
+  rabbitmq:
+    image: rabbitmq:3.12.14-management-alpine
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+  gateway:
+    build: ./nginx
+    ports:
+      - "8000:80"
